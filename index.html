@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+   <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+   <style>
+      *,html, body {
+         font-size: 18px;
+         font-family: sans-serif;
+         padding: 0;
+         margin: 0;
+         box-sizing: border-box;
+      }
+
+      body {
+         background: #222;
+      }
+
+      header {
+         height: 500px;
+         background:  #fca311;
+         color: #222;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content: center;
+      }
+
+      nav {
+         height: 100px;
+         background: #222;
+         display: flex;
+         flex-direction: row;
+         justify-content: flex-end;
+         align-items: center;
+      }
+
+      nav a {
+         margin-right: 20px;
+         color: #fca311;
+         text-decoration: none;
+         padding: 10px 10px;
+         border: 2px solid #fca311;
+         font-weight: bold;
+         border-radius: 6px;
+      }
+
+      nav a:hover {
+         background: #fca311;
+         color: #222;
+      }
+
+      header h1 {
+        font-size: 8rem;
+      } 
+
+      article, section {
+         width: 70%;
+         margin:100px  auto;
+      }
+
+      section , article h3, section a{
+         color: #fca311;
+      }
+
+      section h2 , section p, article h3, section a{
+         font-size: 3rem;
+         margin-bottom: 90px;
+      }
+
+      #editor {
+         height: 500px;
+         margin-bottom: 90px;
+      }
+
+      article p {
+         color: white;
+         font-size: 2rem;
+      }
+
+      footer {
+         width: 100%;
+         height: 200px;
+         background: #fca311;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         font-size: 2rem;
+         font-weight: bold;
+      }
+   </style>
+   <title>Notas</title>
+</head>
+<body>
+   <nav>
+      <a href="https://timely-tanuki-3a3077.netlify.app">Iniciar sesion</a>
+      <a href="https://timely-tanuki-3a3077.netlify.app/html/signup">Crear cuenta</a>
+   </nav>
+   <header>
+      <h1>Tus notas</h1>
+   </header>
+
+   <section>
+      <h2>Un software para guardar notas</h2>
+      <div id="editor" class="note-content"></div>
+      <p><a href="https://timely-tanuki-3a3077.netlify.app">Si quieres guardar tus notas, tienes que iniciar sesion</a></p>
+   </section>
+
+   <article>
+      <h3>Como se realizo este proyecto?</h3>
+      <p>Descripción del Proyecto de Aplicación Web con Quill, Firebase y Autenticación
+
+         En este proyecto, he desarrollado una aplicación web que permite a los usuarios crear, editar y eliminar notas de manera fácil y eficiente. La aplicación utiliza la librería Quill para proporcionar un editor de texto enriquecido con funcionalidades como formato de texto, listas y herramientas de estilo.  <br>
+         
+         La autenticación de usuarios se gestiona a través de Firebase, lo que garantiza un acceso seguro y personalizado para cada usuario. La implementación de Firebase incluye funciones para registrar nuevos usuarios mediante el método `createUserWithEmailAndPassword` y autenticar usuarios existentes a través de `signInWithEmailAndPassword`.
+         
+         El proyecto sigue una estructura CRUD (Crear, Leer, Actualizar, Eliminar), permitiendo a los usuarios realizar las siguientes acciones:  <br>  <br>
+         
+         1. Crear Notas: Los usuarios pueden redactar y guardar nuevas notas mediante el editor Quill. La información de la nota, como su contenido, fecha de creación y un identificador único, se almacena en la base de datos Firebase.
+         
+         <br> <br> 2. Leer Notas: Las notas se cargan dinámicamente en la interfaz de usuario al inicio, utilizando la función `getNotes` para recuperar las notas asociadas al usuario actual. Cada nota se muestra en una lista interactiva, y al hacer clic en una nota, su contenido se carga en el editor Quill para su visualización y edición.
+         
+         <br> <br> 3. Actualizar Notas: Los usuarios pueden realizar cambios en el contenido de una nota y actualizarla con un solo clic. La función `updateNote` se encarga de sincronizar los cambios con la base de datos Firebase.
+         
+         <br> <br>4.*Eliminar Notas: La aplicación permite a los usuarios eliminar notas seleccionadas. Al hacer clic en el botón de eliminar, se utiliza la función `deleteNote` para eliminar la nota de la base de datos y actualizar la interfaz de usuario.
+         
+         <br> <br> El código también incluye funciones adicionales, como la generación de identificadores únicos para cada nota, la obtención de la fecha actual y la personalización del editor Quill mediante una barra de herramientas que facilita la edición del texto.
+         
+         <br> <br>La interfaz de usuario es amigable y presenta un diseño intuitivo que facilita la navegación y comprensión de las acciones disponibles. Además, se ha implementado un sistema de autenticación que garantiza la privacidad y seguridad de la información de cada usuario.
+         
+         <br> <br> En resumen, este proyecto ofrece una experiencia de usuario completa para la gestión de notas, combinando la potencia de Quill y Firebase para brindar un entorno eficiente y seguro.</p>
+   </article>
+
+
+   <footer>
+      derechos resrvados @Bernardo Rosas Garcia
+   </footer>
+</body>
+<script src="./quill.js"></script>
+
+
+</html>
